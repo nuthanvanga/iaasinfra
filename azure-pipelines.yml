@@ -23,5 +23,17 @@ steps:
     location: 'East US'
     csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/VmTemplate.Json'
     csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/VmParameters.Json'
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'Storage Account Deploy'
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Testprojconnection'
+    subscriptionId: '6126332c-5b2e-46d0-bdbb-a09be68684db'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'NuthanRg'
+    location: 'East US'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/StorageAccount/Storage.Json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/StorageAccount/StorageParameters.Json'
+
     # Override any parameters if needed
     # overrideParameters: '-projectName ProductionProject'
