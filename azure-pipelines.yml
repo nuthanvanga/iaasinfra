@@ -13,6 +13,17 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 - task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'Storage Account Deploy'
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Testprojconnection'
+    subscriptionId: '6126332c-5b2e-46d0-bdbb-a09be68684db'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'NuthanRg'
+    location: 'East US'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/keyvault.Json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/KeyvaultParameters.Json'    
+- task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Deploy ARM Template'
   inputs:
     deploymentScope: 'Resource Group'
