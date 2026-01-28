@@ -10,7 +10,17 @@ pool:
   name: 'testpool'
 
 steps:
-- script: echo Hello, world!
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Testprojconnection'
+    subscriptionId: '6126332c-5b2e-46d0-bdbb-a09be68684db'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'NuthanRg'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://dev.azure.com/nuthan2703/_git/TestProj?path=/Infrapipelines/VmTemplate.Json'
+    deploymentMode: 'Incremental'
   displayName: 'Run a one-line script'
 
 - script: |
