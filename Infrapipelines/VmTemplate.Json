@@ -7,7 +7,7 @@
       "metadata": {
         "description": "The name of the Azure Storage Account. Must be globally unique."
       },
-      "minLength": 3,
+      "minLength": 4,
       "maxLength": 24
     },
     "location": {
