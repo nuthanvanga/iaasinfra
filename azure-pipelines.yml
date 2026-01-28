@@ -32,8 +32,8 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'NuthanRg'
     location: 'East US'
-    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/VmTemplate.Json'
-    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/VmParameters.Json'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/virtualMachines/VmTemplate.Json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/virtualMachines/VmParameters.Json'
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Storage Account Deploy'
   inputs:
