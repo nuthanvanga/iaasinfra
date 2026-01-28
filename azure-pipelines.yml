@@ -3,7 +3,8 @@ trigger:
 
 pool:
   name: 'testpool'
-
+variables:
+- group: ProdVariableGroup
 steps:
 
 - task: PublishBuildArtifacts@1
