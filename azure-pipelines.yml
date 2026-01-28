@@ -19,7 +19,7 @@ steps:
     resourceGroupName: 'NuthanRg'
     location: 'East US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://dev.azure.com/nuthan2703/TestProj?path=/Infrapipelines/VmTemplate.Json'
+    csmFileLink: '/Infrapipelines/VmTemplate.Json'
     deploymentMode: 'Incremental'
   displayName: 'Run a one-line script'
 
