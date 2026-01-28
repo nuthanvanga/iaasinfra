@@ -5,6 +5,11 @@ pool:
   name: 'testpool'
 
 steps:
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Deploy ARM Template'
   inputs:
