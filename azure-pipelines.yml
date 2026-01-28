@@ -15,6 +15,6 @@ steps:
     resourceGroupName: 'NuthanRg'
     location: 'East US'
     csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/VmTemplate.Json'
-    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/vmparmeters.Json'
+    csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/vmparmeter.json'
     # Override any parameters if needed
     # overrideParameters: '-projectName ProductionProject'
