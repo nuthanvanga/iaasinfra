@@ -87,7 +87,7 @@
             "value": "testvm"
         },
         "adminPassword": {
-            "value": null
+            "value": "Nuthan@09@22"
         },
         "patchMode": {
             "value": "AutomaticByPlatform"
