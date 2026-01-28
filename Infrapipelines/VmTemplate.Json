@@ -3,7 +3,6 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storageAccountName": {
-      "name": "testportex"
       "type": "string",
       "metadata": {
         "description": "The name of the Azure Storage Account. Must be globally unique."
