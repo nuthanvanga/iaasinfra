@@ -8,6 +8,7 @@ variables:
 - name: my-location
   value: $[variables.location]
 steps:
+-script: echo $(my-location)
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
