@@ -5,9 +5,9 @@
         "name": {
             "value": "testportkey"
         },
-        "location": {
-            "value": ""
-        },
+       /* "location": {
+            "value": "eastus"
+        }, */
         "sku": {
             "value": "Standard"
         },
