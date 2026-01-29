@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: 'testpool'
+  name: 'Azure Pipelines'
 variables:
 - group: ProdVariableGroup
 - name: my-location
