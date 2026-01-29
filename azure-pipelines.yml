@@ -22,7 +22,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'NuthanRg'
     location: '$(my-location)'
-    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/keyvault.Json'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/keyvault1.Json'
     csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/KeyvaultParameters.Json'    
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Vm Deployment'
