@@ -8,7 +8,6 @@ variables:
 - name: my-location
   value: $[variables.location]
 steps:
--script: echo $(my-location)
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -23,7 +22,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'NuthanRg'
     location: 'East US'
-    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/keyvault1.Json'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/keyvault.Json'
     csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/keyvault/KeyvaultParameters.Json'    
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Vm Deployment'
@@ -34,7 +33,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'NuthanRg'
     location: 'East US'
-    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/virtualMachines/VmTemplate1.Json'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/virtualMachines/VmTemplate.Json'
     csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/virtualMachines/VmParameters.Json'
 - task: AzureResourceManagerTemplateDeployment@3
   displayName: 'Storage Account Deploy'
@@ -45,7 +44,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'NuthanRg'
     location: 'East US'
-    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/StorageAccount/Storage1.Json'
+    csmFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/StorageAccount/Storage.Json'
     csmParametersFile: '$(System.DefaultWorkingDirectory)/Infrapipelines/StorageAccount/StorageParameters.Json'
 
     # Override any parameters if needed
