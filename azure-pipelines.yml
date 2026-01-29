@@ -6,7 +6,6 @@ pool:
 variables:
 - group: ProdVariableGroup
 steps:
-echo var.location
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
