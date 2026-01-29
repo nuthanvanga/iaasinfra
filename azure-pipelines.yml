@@ -5,6 +5,9 @@ pool:
   name: 'testpool'
 variables:
 - group: ProdVariableGroup
+- name: my-location
+  value: $[variables.location]
+- script: echo $(my-location)
 steps:
 - task: PublishBuildArtifacts@1
   inputs:
